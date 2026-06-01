@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pagamento | Petszy</title>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom,#b8ffb3,#eefded);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixa{
+
+    background: white;
+    width: 400px;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+}
+
+h1{
+
+    text-align: center;
+    color: #5ca83b;
+    margin-bottom: 25px;
+
+}
+
+.valores{
+
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+
+}
+
+.valor{
+
+    flex: 1;
+    min-width: 80px;
+    height: 50px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #6fcf4f;
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+select{
+
+    width: 100%;
+    height: 50px;
+
+    border-radius: 12px;
+    border: 2px solid #ccc;
+
+    padding: 10px;
+    margin-bottom: 25px;
+
+    font-size: 16px;
+
+}
+
+.btn-pagar{
+
+    width: 100%;
+    height: 50px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: black;
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="caixa">
+
+    <h1>Fazer Doação</h1>
+
+    <div class="valores">
+
+    <button class="valor" onclick="selecionarValor(10)">
+        R$10
+    </button>
+
+    <button class="valor" onclick="selecionarValor(20)">
+        R$20
+    </button>
+
+    <button class="valor" onclick="selecionarValor(50)">
+        R$50
+    </button>
+
+    <button class="valor" onclick="selecionarValor(100)">
+        R$100
+    </button>
+
+</div>
+
+<input
+type="number"
+id="valor-personalizado"
+placeholder="Digite outro valor"
+style="
+width: 100%;
+height: 50px;
+margin-bottom: 20px;
+border-radius: 12px;
+border: 2px solid #ccc;
+padding: 10px;
+font-size: 16px;
+">
+
+    <select>
+
+        <option>Escolha a forma de pagamento</option>
+        <option>PIX</option>
+        <option>Cartão de Crédito</option>
+        <option>Cartão de Débito</option>
+        <option>Boleto Bancário</option>
+
+    </select>
+
+    <button class="btn-pagar">
+        Confirmar Doação
+    </button>
+
+    <div class="caixa-postal">
+
+    <h3>Envio de Doações</h3>
+
+    <p>
+        Petszy <br>
+        Caixa Postal 4500 <br>
+        CEP 04012-970 <br>
+        Ribeirão Preto - SP
+    </p>
+
+</div>
+
+</div>
+
+</body>
+</html>

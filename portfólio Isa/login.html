@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Petszy</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-page">
+
+    <header class="home-header">
+
+        <a href="#" class="logo">Petszy</a>
+
+        <nav class="nav">
+
+            <a href="index.html">Home</a>
+            <a href="Queradotar.html">Quer adotar?</a>
+            <a href="Querajudar.html">Quer ajudar?</a>
+            <a href="login.html">Login</a>
+
+        </nav>
+
+        <div class="menu-hamburguer" onclick="abrirMenu()">
+
+            <div class="linha"></div>
+            <div class="linha"></div>
+            <div class="linha"></div>
+
+        </div>
+
+    </header>
+
+    <main class="container">
+
+        <form id="form-login">
+
+            <div class="avatar-login">
+    <i class='bx bxs-user-circle'></i>
+</div>
+
+            <h1>Login</h1>
+      
+
+            <div class="input-box">
+                <input placeholder="Usuário" type="email" name="email" id="email" required>
+                <i class='bx bxs-user'></i>
+            </div>
+
+            <div class="input-box">
+                <input placeholder="Senha" type="password" name="senha" id="senha" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+
+            <div class="lembrar">
+
+                <label>
+                  <input type="checkbox" id="lembrar">
+                       Lembrar login
+                </label>
+
+                <a href="redefinir-senha.html">Esqueceu a senha?</a>
+
+            </div>
+
+            <button type="button" class="btn-login" onclick="fazerLogin()">
+                Entrar
+            </button>
+
+            <div class="cadastro">
+                <p>
+                    Não possui conta?
+                   <a href="cadastro.html">Criar conta</a>
+                </p>
+            </div>
+
+        </form>
+
+    </main>
+
+    </main>
+
+    <script src="script.js"></script>
+
+<script>
+
+function fazerLogin(){
+
+    localStorage.setItem("usuarioLogado", "true");
+
+    const parametros = new URLSearchParams(window.location.search);
+
+    const destino = parametros.get("destino");
+
+    if(destino){
+
+        window.location.href = destino;
+
+    }else{
+
+        window.location.href = "index.html";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
